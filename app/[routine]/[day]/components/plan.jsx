@@ -3,11 +3,11 @@ import styled from "styled-components";
 export default function Plan({ data }) {
   return (
     <StyledPlan>
-      <p className="name">{data.name}</p>
+      <p className="name-plan">{data.name}</p>
       <div>
         <ol className="plan-container">
           {data.containt.map((item) => (
-            <li key={item} type="1">
+            <li className="item-plan" key={item} type="1">
               {item}
             </li>
           ))}
@@ -20,7 +20,7 @@ export default function Plan({ data }) {
 const StyledPlan = styled.div`
   && {
   }
-  .name {
+  .name-plan {
     font-size: 0.8rem;
     font-weight: 600;
     margin-left: 0.5rem;
@@ -35,7 +35,7 @@ const StyledPlan = styled.div`
     margin-bottom: 1rem;
   }
 
-  li {
+  .item-plan {
     font-size: 1.2rem;
     margin-left: 3rem;
     width: 80%;
