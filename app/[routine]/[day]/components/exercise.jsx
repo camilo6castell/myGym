@@ -27,15 +27,21 @@ export default function Exercise({ data }) {
 const WarnUpItem = styled.div`
   & {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    margin: 0 auto 1rem;
+    margin: 0 0 1rem;
+
+    width: 100%;
   }
 
   .name {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+
+    width: 100%;
+    text-align: left;
   }
 
   .warnup-container {

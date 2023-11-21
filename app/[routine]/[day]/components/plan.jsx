@@ -21,21 +21,23 @@ const StyledPlan = styled.div`
   && {
   }
   .name {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    margin: 0rem 0 0.5rem 1rem;
+    margin-left: 0.5rem;
     width: 100%;
   }
 
   .plan-container {
     display: flex;
     flex-direction: column;
-
     justify-content: space-around;
+
+    margin-bottom: 1rem;
   }
 
   li {
-    font-size: 1.3rem;
-    margin-left: 4rem;
+    font-size: 1.2rem;
+    margin-left: 3rem;
+    width: 80%;
   }
 `;

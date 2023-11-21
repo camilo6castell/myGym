@@ -56,8 +56,13 @@ const StyledSection = styled.div`
     width: fit-content;
   }
 
+  .plans-title {
+    margin-bottom: 0.5rem;
+  }
+
   .duration-title {
     font-weight: 600;
+    text-align: center;
   }
 
   .name {
