@@ -13,20 +13,15 @@ import Days from "./components/days";
 
 export default function Home() {
   const data = useContext(DataContext);
-  const [routine, setRoutine] = useState(data.routines[1]);
-  const [routineIndex, setRoutineIndex] = useState(2);
+  const { routine, setRoutine, index, setIndex } = data.states;
 
   useEffect(() => {
-    setRoutine(data.routines[routineIndex - 1]);
-  }, [routineIndex]);
+    setRoutine(data.routines[index - 1]);
+  }, [index]);
 
   return (
     <StyledApp>
-      <Bar
-        data={data}
-        setRoutineIndex={setRoutineIndex}
-        routineIndex={routineIndex}
-      />
+      <Bar data={data} setRoutineIndex={setIndex} routineIndex={index} />
       <Days routine={routine} />
     </StyledApp>
   );

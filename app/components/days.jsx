@@ -5,14 +5,18 @@ import ButtonDay from "./buttonDay";
 export default function Days({ routine }) {
   return (
     <StyledSection>
-      {routine.days.map((day) => (
-        <ButtonDay
-          routineNumber={routine.number}
-          key={day.day}
-          day={day.day}
-          topic={day.body}
-        />
-      ))}
+      {routine.days ? (
+        routine.days.map((day) => (
+          <ButtonDay
+            routineNumber={routine.number}
+            key={day.day}
+            day={day.day}
+            topic={day.body}
+          />
+        ))
+      ) : (
+        <button>cargando</button>
+      )}
     </StyledSection>
   );
 }
