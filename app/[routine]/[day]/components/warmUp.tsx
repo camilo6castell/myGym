@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 import Exercise from "./exercise";
 
-export default function WarmUp({ data }) {
+import { WarmUpType, ExerciseType } from "../../../lib/typesTs";
+
+export default function WarmUp({ data }: { data: WarmUpType }) {
+  const exercises: ExerciseType[] = data.exercises;
   return (
     <StyledSection>
       <div className="title">
@@ -10,7 +13,7 @@ export default function WarmUp({ data }) {
         <span className="warmup-time-title">{data.time}</span>
       </div>
       <div className="warmup-container">
-        {data.exercises.map((exercise) => (
+        {exercises.map((exercise: ExerciseType) => (
           <Exercise key={exercise.name} data={exercise} />
         ))}
       </div>
@@ -39,7 +42,7 @@ const StyledSection = styled.div`
   }
 
   .title {
-    margin: 0rem auto 1rem;
+    margin: 0rem auto 0rem;
     padding: 0.5rem;
     background: linear-gradient(-45deg, #aa2525, #b94848, #136e8f, #52c7c7);
     width: 100%;
@@ -53,8 +56,8 @@ const StyledSection = styled.div`
   } */
   .name-title,
   .warmup-time-title {
-    font-size: 1.2rem;
-    margin: 0rem auto 0.4rem;
+    font-size: 1.1rem;
+    margin: 0rem auto;
   }
 
   .warmup-time-title {

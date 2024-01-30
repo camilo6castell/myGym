@@ -1,21 +1,25 @@
 import styled from "styled-components";
 
-export default function Exercise({ data }) {
+import { ExerciseType } from "../../../lib/typesTs";
+
+export default function Exercise({ data }: { data: ExerciseType }) {
+  const configKeys: string[] = data.configKeys;
+  const configValues: string[] = data.configValues;
   return (
     <WarnUpItem>
       <span className="name">{data.name}</span>
       <div className="warnup-container">
         <div className="exercise-name">
-          {data.config.map((c) => (
-            <span key={c} className="exercise-config">
-              {c}
+          {configKeys.map((configItem: string) => (
+            <span key={configItem} className="exercise-config">
+              {configItem}
             </span>
           ))}
         </div>
         <div className="exercise-vale">
-          {data.configValue.map((c) => (
-            <span key={c} className="exercise-value">
-              {c}
+          {configValues.map((configValue: string) => (
+            <span key={configValue} className="exercise-value">
+              {configValue}
             </span>
           ))}
         </div>

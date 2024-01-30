@@ -2,16 +2,25 @@ import styled from "styled-components";
 
 import Plan from "./plan";
 
-export default function Plans({ data }) {
+import { DayType, PlanType } from "../../../lib/typesTs";
+
+export default function Plans({ data }: { data: DayType }) {
+  const plans: PlanType[] = data.plans;
+
+  let rowsnumber = 0;
+  for (let i = 0; i < plans.length; i++) {
+    rowsnumber += plans[i].containt.length;
+  }
+
   return (
     <StyledSection>
       <div className="title">
         <span className="plans-title">Rutina de hoy: </span>
         <span className="duration-title">{data.duration}</span>
       </div>
-      <div className="plan-container">
-        {data.plan.map((p) => (
-          <Plan key={p.name} data={p} />
+      <div className="plan-container" id="plan-container">
+        {plans.map((plan: PlanType) => (
+          <Plan key={plan.name} data={plan} rowsnumber={rowsnumber} />
         ))}
       </div>
     </StyledSection>
@@ -51,14 +60,14 @@ const StyledSection = styled.div`
 
   .plans-title,
   .duration-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0rem auto 0rem;
     width: fit-content;
   }
 
-  .plans-title {
+  /* .plans-title {
     margin-bottom: 0.5rem;
-  }
+  } */
 
   .duration-title {
     font-weight: 600;

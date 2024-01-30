@@ -1,18 +1,19 @@
+// basic import
 import styled from "styled-components";
-
+//
+// REDUX
+import { useAppSelector } from "../lib/redux/hooks";
+//
+//components
 import ButtonDay from "./buttonDay";
-
-export default function Days({ routine }) {
+//
+export default function Days() {
+  const routine = useAppSelector((state) => state.routine);
   return (
     <StyledSection>
       {routine.days ? (
         routine.days.map((day) => (
-          <ButtonDay
-            routineNumber={routine.number}
-            key={day.day}
-            day={day.day}
-            topic={day.body}
-          />
+          <ButtonDay key={day.day} routineNumber={routine.number} day={day} />
         ))
       ) : (
         <button>cargando</button>
@@ -28,19 +29,18 @@ const StyledSection = styled.div`
     justify-content: space-evenly;
     align-items: center;
 
-    width: fit-content;
-    height: 80%;
-    margin: 1rem 1rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
     padding: 1rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
 
     background-color: rgb(13, 20, 29);
 
-    color: aliceblue;
-    text-shadow: 0px 0px 2px rgba(217, 222, 228, 0.7);
-  }
-
-  span {
-    width: fit-content;
+    transition: all 2s;
   }
 `;
+
+// color: aliceblue;
+// text-shadow: 0px 0px 2px rgba(217, 222, 228, 0.7);
