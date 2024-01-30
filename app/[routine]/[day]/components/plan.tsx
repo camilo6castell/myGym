@@ -46,11 +46,11 @@ const StyledPlan = styled.div<{ rowsnumber: number }>`
     flex-direction: column;
     justify-content: space-around;
 
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   }
 
   .item-plan {
-    font-size: calc(20vh / ${({ rowsnumber }) => rowsnumber});
+    font-size: calc(22vh / ${({ rowsnumber }) => rowsnumber});
     margin-left: 3rem;
     width: 80%;
   }

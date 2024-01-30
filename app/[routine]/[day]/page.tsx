@@ -24,7 +24,7 @@ export default function DayRoutine({
       <WarmUp data={warmUp} />
       <Plans data={day} />
       <Link href={`/`} className="buttonback-container">
-        <StyledButtonBack>Volver atrás</StyledButtonBack>
+        <StyledButtonBack></StyledButtonBack>
       </Link>
     </StyledApp>
   );
@@ -52,16 +52,31 @@ const StyledApp = styled.div`
 
 const StyledButtonBack = styled.div`
   & {
-    border-radius: 1rem;
-    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
 
     margin: 0rem 1rem 1rem 1rem;
 
-    border-radius: 0.5rem;
+    border-radius: 50%;
     background-color: #d765b3;
+    border: 0.2rem solid black;
 
     color: aliceblue;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
     font-weight: 700;
+  }
+
+  &&::after {
+    position: absolute;
+    content: "Atrás";
+
+    padding: auto;
   }
 `;

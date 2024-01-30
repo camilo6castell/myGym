@@ -31,15 +31,17 @@ export default function Bar() {
 
   return (
     <StyledSection>
-      <Image
-        placeholder="empty"
-        height={100}
-        width={100}
-        src={data.personal.photo}
-        className="userImage"
-        alt="User image"
-        priority={false}
-      />
+      <div className="img-container">
+        <Image
+          placeholder="empty"
+          height={100}
+          width={100}
+          src={data.personal.photo}
+          className="userImage"
+          alt="User image"
+          priority={false}
+        />
+      </div>
       <div className="userWelcome">
         <span className="welcome">Bienvenida!</span>
         <span className="name">{data.personal.name}</span>
@@ -77,15 +79,19 @@ const StyledSection = styled.div`
 
     margin-top: 0rem;
 
-    padding: 1rem;
+    padding: 0rem 1rem 0rem 1rem;
     border-radius: 1rem;
 
     color: aliceblue;
     text-shadow: 0px 0px 2px rgba(217, 222, 228, 0.7);
   }
 
+  .img-container {
+    width: 20%;
+  }
+
   .userImage {
-    width: 7rem;
+    width: 100%;
 
     margin: 0.5rem 1rem 0.5rem 0.5rem;
     border-radius: 50%;
@@ -97,14 +103,16 @@ const StyledSection = styled.div`
   }
 
   .userWelcome {
+    width: fit-content;
     display: flex;
     flex-direction: column;
+    padding: 1rem 0rem 1rem 1rem;
   }
 
   .welcome {
     width: fit-content;
-    font-size: 2rem;
-    margin: 0rem 0rem 0.4rem;
+    font-size: 1rem;
+    margin: 0rem 0rem 0rem;
     padding-right: 1rem;
 
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
@@ -118,6 +126,7 @@ const StyledSection = styled.div`
   }
 
   .pickRoutine {
+    width: 30%;
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
@@ -137,6 +146,10 @@ const StyledSection = styled.div`
     background-color: #201f1f;
 
     border-radius: 0.5rem;
+  }
+
+  #routine {
+    margin-left: 0.5rem;
   }
 `;
 

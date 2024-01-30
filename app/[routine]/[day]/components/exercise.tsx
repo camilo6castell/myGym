@@ -31,21 +31,23 @@ export default function Exercise({ data }: { data: ExerciseType }) {
 const WarnUpItem = styled.div`
   & {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 1rem;
+    margin: 0;
 
     width: 100%;
+    padding: 0.2rem 1.5rem;
   }
 
   .name {
+    text-align: center;
     font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
 
     width: 100%;
-    text-align: left;
+    /* text-align: left; */
   }
 
   .warnup-container {
@@ -55,7 +57,7 @@ const WarnUpItem = styled.div`
 
   .exercise-name,
   .exercise-vale {
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     padding: 0.5rem 0.5rem 0;

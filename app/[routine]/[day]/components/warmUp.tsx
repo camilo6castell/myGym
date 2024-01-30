@@ -66,7 +66,7 @@ const StyledSection = styled.div`
 
   .warmup-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0;

@@ -24,7 +24,7 @@ export default function ButtonDay({
 const StyledButtonDay = styled.div`
   & {
     width: 95%;
-    padding: 1rem;
+    /* padding: 1rem; */
     border-radius: 0.5rem;
     /* background-color: #d765b3; */
 
@@ -67,7 +67,7 @@ const StyledButtonDay = styled.div`
 
     white-space: nowrap;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 900;
     color: aliceblue;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);

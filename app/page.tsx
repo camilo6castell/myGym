@@ -24,6 +24,6 @@ const StyledApp = styled.div`
     justify-content: stretch;
     align-items: center;
 
-    padding: 1rem;
+    /* padding: 1rem; */
   }
 `;
