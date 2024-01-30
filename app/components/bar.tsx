@@ -87,11 +87,12 @@ const StyledSection = styled.div`
   }
 
   .img-container {
-    width: 20%;
+    width: fit-content;
   }
 
   .userImage {
-    width: 100%;
+    /* width: 100%; */
+    max-width: 124px;
 
     margin: 0.5rem 1rem 0.5rem 0.5rem;
     border-radius: 50%;
@@ -126,7 +127,7 @@ const StyledSection = styled.div`
   }
 
   .pickRoutine {
-    width: 30%;
+    width: fit-content;
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
