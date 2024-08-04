@@ -249,6 +249,18 @@ body {
   background-color: rgb(31, 31, 31);
 }
 
+.userImage {
+  max-width: 124px;
+
+  margin: 0.5rem 1rem 0.5rem 0.5rem;
+  border-radius: 50%;
+
+  opacity: 0;
+
+  animation: 0.7s ease 0.1s forwards zoomIn;
+  transition: all 2s;
+}
+
 .test-color {
   color: rgb(0, 47, 60);
 }

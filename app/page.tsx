@@ -1,4 +1,7 @@
 "use client";
+//Suspense
+// import { Suspense } from "react";
+// import Loading from "./loading";
 // Library Style
 import styled from "styled-components";
 //

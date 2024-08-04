@@ -1,9 +1,12 @@
+// Regular imports
 import styled from "styled-components";
-
+//
+// Types
 import { DayType } from "../lib/typesTs";
-
+//
+// Components
 import Link from "next/link";
-
+//
 export default function ButtonDay({
   day,
   routineNumber,

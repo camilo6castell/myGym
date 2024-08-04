@@ -14,6 +14,12 @@ import { DataProvider } from "./lib/userContext";
 import { Provider } from "react-redux";
 import { store } from "./lib/redux/store";
 //
+
+//SUSPENSE-LOADING SPINNER
+import { Suspense } from "react";
+import Loading from "./loading";
+//
+
 // FONT
 import { Inter } from "next/font/google";
 
@@ -46,9 +52,11 @@ export default function RootLayout({
     <html lang="es">
       {/* <body className={roboto.className}> */}
       <body className={`${roboto.className} antialiased`}>
+        {/* <Suspense fallback={<Loading />}> */}
         <DataProvider>
           <Provider store={store}>{children}</Provider>
         </DataProvider>
+        {/* </Suspense> */}
       </body>
     </html>
   );

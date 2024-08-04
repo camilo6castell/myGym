@@ -24,7 +24,7 @@ export default function DayRoutine({
       <WarmUp data={warmUp} />
       <Plans data={day} />
       <Link href={`/`} className="buttonback-container">
-        <StyledButtonBack></StyledButtonBack>
+        <StyledButtonBack />
       </Link>
     </StyledApp>
   );

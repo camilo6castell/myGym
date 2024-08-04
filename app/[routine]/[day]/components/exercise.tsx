@@ -1,7 +1,9 @@
+// Regular imports
 import styled from "styled-components";
-
+//
+// Types
 import { ExerciseType } from "../../../lib/typesTs";
-
+//
 export default function Exercise({ data }: { data: ExerciseType }) {
   const configKeys: string[] = data.configKeys;
   const configValues: string[] = data.configValues;

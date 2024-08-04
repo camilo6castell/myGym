@@ -32,14 +32,14 @@ export default function Bar() {
   return (
     <StyledSection>
       <div className="img-container">
-        <Image
-          placeholder="empty"
-          height={100}
-          width={100}
+        <img
+          // placeholder="empty"
+          // height={100}
+          // width={100}
           src={data.personal.photo}
           className="userImage"
           alt="User image"
-          priority={false}
+          // priority={false}
         />
       </div>
       <div className="userWelcome">
@@ -88,19 +88,6 @@ const StyledSection = styled.div`
 
   .img-container {
     width: fit-content;
-  }
-
-  .userImage {
-    /* width: 100%; */
-    max-width: 124px;
-
-    margin: 0.5rem 1rem 0.5rem 0.5rem;
-    border-radius: 50%;
-
-    opacity: 0;
-
-    animation: 0.7s ease 0.1s forwards zoomIn;
-    transition: all 2s;
   }
 
   .userWelcome {
